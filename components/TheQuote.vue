@@ -4,9 +4,6 @@ const props = defineProps({
 })
 const { data: quote, pending, error } = await useFetch(() => `https://dummyjson.com/quotes/${props.id}`)
 
-console.log(quote)
-
-
 </script>
 
 <template>
