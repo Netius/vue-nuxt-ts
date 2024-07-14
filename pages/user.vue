@@ -1,10 +1,14 @@
 <template>
   <div>
-    <p>This is a parent view!</p>
-    <NuxtLink to="/user/post">Post</NuxtLink>
-    <br>
-    <NuxtLink to="/user/profile">Profile</NuxtLink>
-    <NuxtPage />
+    <h2>User page</h2>
+    <ul>
+      <li>
+        <NuxtLink to="/user/post">Post</NuxtLink>
+      </li>
+      <li>
+        <NuxtLink to="/user/profile">Profile</NuxtLink>        
+      </li>
+    </ul>
     <Testing />
   </div>
 </template>
