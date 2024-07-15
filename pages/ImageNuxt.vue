@@ -12,7 +12,7 @@ const { data: gallery, refresh } = await useAsyncData('get', () =>
   <a href="https://image.nuxt.com/" target="_blank" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">https://image.nuxt.com/</a>
 
   <div class="row">
-    <div class="col-md-4" v-for="(image, index) in gallery" :key="`image-${index}`">
+    <div class="col-md-4" v-for="(image, index) in gallery.slice(0, 12)" :key="`image-${index}`">
       <div class="card my-3">
         <NuxtImg 
           :src="image.download_url" 
