@@ -5,7 +5,4 @@ export default defineNuxtConfig({
   modules: [
     'floating-vue/nuxt'
   ],
-  // plugins: [
-  //   '~/plugins/floating-vue'
-  // ]
 })

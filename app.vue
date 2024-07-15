@@ -1,38 +1,49 @@
-
-
 <script setup lang="ts">
-import {
-  vTooltip,
-  vClosePopper,
-  Dropdown,
-  Tooltip,
-  Menu
-} from 'floating-vue'
+// import 'floating-vue/dist/style.css'
+
 
 const layout: string = "my-layout";
 const blogLayout: string = "blog-layout";
 </script>
 
 <template>
-  <div>
-    <h1>Home page</h1>
-    <Dropdown>
-      <button>Click me</button>
-    </Dropdown>
 
-    <Tooltip>
-      <a>Sponsor me</a>
-    </Tooltip>
+  <h1>Home page</h1>
 
-    <Menu>
-      <button>Documentation</button>
-    </Menu>
+  <VDropdown :distance="6">
+    <!-- This will be the popover reference (for the events and position) -->
+    <button>Click me</button>
 
-    <button v-tooltip="'msg'">Hover me</button>
+    <!-- This will be the content of the popover -->
+    <template #popper>
+      <input class="tooltip-content" v-model="msg" placeholder="Tooltip content" />
+      <p>
+        {{ msg }}
+      </p>
+    </template>
+  </VDropdown>
 
-    <NuxtLayout :name="layout" />
 
-    <!-- <NuxtLayout :name="blogLayout" /> -->
-    <NuxtPage />
-  </div>
+  <VTooltip>
+    <a>Sponsor me</a>
+
+    <template #popper>
+      Help me fund my Open Source work!
+    </template>
+  </VTooltip>
+
+  <VMenu>
+    <button>Documentation</button>
+
+    <template #popper>
+      <button>Guide</button>
+      <button>API Reference</button>
+    </template>
+  </VMenu>
+
+  <NuxtLayout :name="layout" />
+
+  <!-- <NuxtLayout :name="blogLayout" /> -->
+  <NuxtPage />
+
 </template>
