@@ -1,3 +1,3 @@
 <template>
-  <p>Profile children</p>
+  <h1>Profile children</h1>
 </template>
