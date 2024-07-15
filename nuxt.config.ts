@@ -2,7 +2,10 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
-  modules: [
-    'floating-vue/nuxt'
-  ],
+  modules: ['floating-vue/nuxt', "@nuxt/image"],
+  image: {
+    domains: [
+      'https://picsum.photos',
+    ],
+  },
 })
