@@ -1,6 +1,15 @@
 <script setup lang="ts">
-// import 'floating-vue/dist/style.css'
+const { $bs } = useNuxtApp();
 
+// Testing if Bootstrap JS files was loadded correctly
+onMounted(() => {
+  try {
+    const collapse = new $bs.Collapse('#navbarSupportedContent');
+    collapse.show();
+  } catch (e) {
+    console.log('Bootstrap error: ', e);
+  }
+});
 
 const layout: string = "my-layout";
 const blogLayout: string = "blog-layout";
