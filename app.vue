@@ -16,8 +16,7 @@ const defaultLayout: string = "default";
 
 <template>
   <NuxtLayout :name="defaultLayout">
-    <div class="container my-3">
       <NuxtPage />
-    </div>
   </NuxtLayout>
 </template>
+
