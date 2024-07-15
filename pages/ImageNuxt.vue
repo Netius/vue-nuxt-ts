@@ -2,12 +2,15 @@
 
 const { data: gallery, refresh } = await useAsyncData('get', () => 
   $fetch(`https://picsum.photos/v2/list`) );
+  console.log(gallery)
 
 </script>
 
 <template>
   <h1>Image nuxt modules</h1>
   <p>Installed nuxt/image v.1 and imported in modules</p>
+  <a href="https://image.nuxt.com/" target="_blank" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">https://image.nuxt.com/</a>
+
   <div class="row">
     <div class="col-md-4" v-for="(image, index) in gallery" :key="`image-${index}`">
       <div class="card my-3">
@@ -23,8 +26,8 @@ const { data: gallery, refresh } = await useAsyncData('get', () =>
           />
         <div class="card-body">
           <h5 class="card-title">{{ image.author }}</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+          <p>Image link:</p>
+          <a :href="image.url" target="_blank" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Link to image</a>
         </div>
       </div>
     </div>
