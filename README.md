@@ -2,6 +2,7 @@
 
 Learning project build with Vue3 , Nuxt3, Typescript, Bootstrap og deployed i Google Cloud.
 
+Link to site: https://vue-nuxt3-ts.ew.r.appspot.com/bootstrap
 ## Setup
 
 Make sure to install the dependencies:
