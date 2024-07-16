@@ -1,5 +1,6 @@
-# Nuxt 3 Minimal Starter
+# Overview
 
+Learning project build with Vue3 , Nuxt3, Typescript, Bootstrap og deployed i Google Cloud.
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
 ## Setup
