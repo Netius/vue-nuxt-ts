@@ -4,6 +4,7 @@
   "type": "module",
   "proxy": "http://localhost:3000",
   "scripts": {
+    "start": "nuxt preview",
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
