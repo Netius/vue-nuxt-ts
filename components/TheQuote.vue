@@ -16,22 +16,21 @@ const decrease = (count: number): number => {
 </script>
 
 <template>
-  <div class="mb-3">
-    <button :disabled="counter == 1" class="btn btn-danger me-3" @click="decrease(1)">Forrige</button>
-    <button class="btn btn-success" @click="increment(1)">Neste</button>
-  </div>
-
-  <div class="card p-3">
+  <div class="card p-3" style="min-height: 200px;">
     <div class="card-body">
       <h3 class="card-title mb-4">Quote</h3>
       <!-- <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6> -->
       <NuxtLoadingIndicator v-if="pending" :duration="1000" :throttle="1000" />
       <pre v-else-if="error">Could not load quote: {{ error.data }}</pre>
       <figure v-else class="quote">
-        <span class="float-end">ID: {{ quote.id }}</span>
+        <span  class="float-end h6">Quote Id: {{ quote.id }}</span>
         <blockquote>{{ quote.quote }}</blockquote>
         <figcaption class="card-subtitle text-body-secondary">&mdash; {{ quote.author }}</figcaption>
       </figure>
     </div>
+  </div>
+  <div class="mt-3">
+    <button :disabled="counter == 1" class="btn btn-danger me-3" @click="decrease(1)">Forrige</button>
+    <button class="btn btn-success" @click="increment(1)">Neste</button>
   </div>
 </template>
