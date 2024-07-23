@@ -24,6 +24,9 @@
             <li class="nav-item">
               <NuxtLink to="/usefetch" class="nav-link">useFetch</NuxtLink>
             </li>
+            <li class="nav-item">
+              <NuxtLink to="/statemanagement" class="nav-link">useState</NuxtLink>
+            </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
@@ -36,6 +39,7 @@
                 <li>
                   <NuxtLink to="../user/profile" class="dropdown-item">Profile</NuxtLink>
                 </li>
+                <li><IsOnline /></li>
               </ul>
             </li>
           </ul>
